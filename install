@@ -2,14 +2,13 @@
 
 echo "installing, please wait."
 
-DEBIAN_FRONTEND=noninteractive sudo apt update && sudo apt install lsd -y
+DEBIAN_FRONTEND=noninteractive sudo apt update && sudo apt install build-essential -y
 
-chmod +x {shell,langs}/*.sh
-
-# Shell Setup
-./shell/zsh.sh
+chmod +x langs/setup.sh
+chmod +x shell/setup.sh
 
 # Language Setup
-./langs/rust.sh
+./langs/setup.sh
 
-cp config/starship.toml ~/.config/starship.toml
+# Shell Setup
+./shell/setup.sh
