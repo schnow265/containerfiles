@@ -2,13 +2,12 @@
 
 echo "installing, please wait."
 
-DEBIAN_FRONTEND=noninteractive sudo apt update && sudo apt install build-essential -y
+DEBIAN_FRONTEND=noninteractive sudo apt update && sudo apt install build-essential tmux fzf zoxide -y
 
 chmod +x langs/setup.sh
 chmod +x shell/setup.sh
+chmod +x tools/setup.sh
 
-# Language Setup
 ./langs/setup.sh
-
-# Shell Setup
 ./shell/setup.sh
+./tools/setup.sh
