@@ -5,3 +5,7 @@ echo "installing, please wait."
 DEBIAN_FRONTEND=noninteractive apt update && apt install lsd -y
 
 ./shell/zsh.sh
+
+curl -sS https://starship.rs/install.sh | sh
+
+cp config/starship.toml ~/.config/starship.toml
