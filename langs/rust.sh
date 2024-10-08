@@ -8,4 +8,4 @@ chmod +x rustup.sh
 
 . "$HOME/.cargo/env"
 
-cd ~/dotfiles
+cd -
