@@ -2,12 +2,14 @@
 
 echo "installing, please wait."
 
-DEBIAN_FRONTEND=noninteractive sudo apt update && apt install lsd -y
+DEBIAN_FRONTEND=noninteractive sudo apt update && sudo apt install lsd -y
 
-chmod +x shell/*.sh
+chmod +x {shell,langs}/*.sh
 
+# Shell Setup
 ./shell/zsh.sh
 
-cargo binstall starship --locked
+# Language Setup
+./langs/rust.sh
 
 cp config/starship.toml ~/.config/starship.toml

@@ -1,0 +1,9 @@
+{
+  "name": "DebContainer",
+
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+  },
+  "runArgs": ["--userns=keep-id"],
+  "containerUser": "vscode"
+}
