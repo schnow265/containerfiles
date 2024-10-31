@@ -5,9 +5,15 @@ echo "installing, please wait."
 DEBIAN_FRONTEND=noninteractive sudo apt update &&  \
     sudo apt install build-essential tmux fzf zoxide ripgrep -y
 
+cd /tmp
 
-chmod +x {langs,shell,tools}/setup.sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup.sh
 
-./langs/setup.sh
-./shell/setup.sh
-./tools/setup.sh
+chmod +x rustup.sh
+
+./rustup.sh -y
+. "$HOME/.cargo/env"
+
+cargo install --path .
+
+cd -
