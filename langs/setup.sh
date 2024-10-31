@@ -1,4 +1,4 @@
 cd langs
-chmod +x rust.sh
+chmod +x *.sh
 ./rust.sh
 cd -

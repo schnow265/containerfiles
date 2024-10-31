@@ -1,6 +1,9 @@
 cd shell
 
-chmod +x zsh.sh
+chmod +x *.sh
 ./zsh.sh
+
+mkdir -p ~/.config
+cp ../config/starship.toml ~/.config
 
 cd -
