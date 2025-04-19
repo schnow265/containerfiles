@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir -p ~/.config
+
+cp config/starship.toml ~/.config/starship.toml
