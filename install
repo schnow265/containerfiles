@@ -2,4 +2,4 @@
 
 mkdir -p ~/.config
 
-cp config/starship.toml ~/.config/starship.toml
+cp configs/starship.toml ~/.config/starship.toml
